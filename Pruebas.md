@@ -1,3 +1,4 @@
+```mermaid
 stateDiagram-v2
 
     [*] --> IDLE
@@ -38,3 +39,5 @@ stateDiagram-v2
 
     LOSE_STATE : Derrota<br>lose = 1
     LOSE_STATE --> IDLE : start_pulse
+
+```
