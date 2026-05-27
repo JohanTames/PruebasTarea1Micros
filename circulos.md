@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
     inicio(( )) --> IDLE
 
@@ -34,3 +35,4 @@ flowchart TD
 
     LOSE_STATE((LOSE_STATE <br> Derrota<br>lose = 1))
     LOSE_STATE -- start_pulse --> NEW_STEP
+```
