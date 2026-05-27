@@ -15,8 +15,8 @@ flowchart TD
     SHOW_LED_OFF -- enable_halfsec --> NEXT_SHOW
 
     NEXT_SHOW((NEXT_SHOW <br> Decide siguiente LED))
-    NEXT_SHOW -- "show_index < sequence_length" --> SHOW_LED_ON
-    NEXT_SHOW -- "show_index == sequence_length" --> WAIT_PLAYER
+    NEXT_SHOW -- "show_index < sequence_length - 1" --> SHOW_LED_ON
+    NEXT_SHOW -- "show_index == sequence_length - 1" --> WAIT_PLAYER
 
     WAIT_PLAYER((WAIT_PLAYER <br> Espera entrada jugador))
     WAIT_PLAYER -- button_pulse --> CHECK_INPUT
@@ -31,8 +31,8 @@ flowchart TD
     NEXT_INPUT -- "otro caso" --> WAIT_PLAYER
 
     WIN_STATE((WIN_STATE <br> Victoria<br>win = 1))
-    WIN_STATE -- start_pulse --> IDLE
+    WIN_STATE -- start_pulse --> NEW_STEP
 
     LOSE_STATE((LOSE_STATE <br> Derrota<br>lose = 1))
-    LOSE_STATE -- start_pulse --> IDLE
+    LOSE_STATE -- start_pulse --> NEW_STEP
 ```
