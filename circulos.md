@@ -4,7 +4,7 @@ flowchart TD
 
     IDLE((IDLE <br> Espera botón START))
     IDLE -- start_pulse --> NEW_STEP
-    IDLE -- !start_pulse --> NEW_STEP
+    IDLE -- !start_pulse --> IDLE
 
     NEW_STEP((NEW_STEP <br> Agrega nuevo color <br> add_step = 1))
     NEW_STEP --> SHOW_LED_ON
